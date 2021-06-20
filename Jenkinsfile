@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-
+                sh 'chmod +x gradlew'
                 sh './gradlew clean'
                 echo 'Building..'
                 sh './gradlew build'
